@@ -5,12 +5,18 @@ const apiBaseUrl =  "http://api.openweathermap.org/data/2.5/"
 function getWeather(event) {
   // console.log(`key ${key}`);
   // console.log("city: " + $("#city").val().trim())
+ 
+ 
+ 
   const cityInput = $("#city").val().trim();
   if (cityInput) {
     city = cityInput;
   }
   console.log("city: " + savedCities);
+ 
+  
   // append new value to the array
+
   savedCities.push(city);
 const queryURL = apiBaseUrl + "weather?q=" + city + "&appid=" + key
   $.ajax({
